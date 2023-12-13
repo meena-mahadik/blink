@@ -48,7 +48,7 @@ $(document).ready(function () {
             // instead of a settings object
         ]
 
-    });   
+    });
 
 
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
             $('.sticky').addClass('fixed');
             $('.banner, .subcategories').css('margin-top', headerHeight);
 
-           
+
         } else {
             // Scrolling down
             $('.sticky').removeClass('fixed');
@@ -83,23 +83,53 @@ $(document).ready(function () {
     }
 
     // Mobile view footer navigation toggle
-    $('.section-footer .icon').click(function() {
-      $(this).parent().parent().toggleClass('active')
-      });
+    $('.section-footer .icon').click(function () {
+        $(this).parent().parent().toggleClass('active')
+    });
 
 
-       // filter toggle
-    $('.toggle-filter').click(function() {
-      $(this).parent('.filter-heading').toggleClass('open')
-      });
+    // filter toggle
+    $('.toggle-filter').click(function () {
+        $(this).parent('.filter-heading').toggleClass('open');
+    });
 
 
 
-        // sort by toggle
-    $('.sort-by .seleted-value').click(function() {
-        $(this).parent('.sort-by').toggleClass('open')
+    // sort by toggle
+    $('.sort-by .seleted-value').click(function (event) {
+        $(this).parent('.sort-by').toggleClass('open');
+        event.stopPropagation();
+    });
+    $(document).on('click', function () {
+        $('.sort-by .seleted-value').parent('.sort-by').removeClass('open');
+    });
+
+
+
+    $('#searchBox').click('input', function (event) {
+        $('.search-autocomplete').css('display', 'flex');
+        event.stopPropagation();
+    });
+    $(document).click('input', function () {
+        $('.search-autocomplete').css('display', 'none');
+    });
+
+    
+
+    if ($(window).width() < 767) {
+
+        $('#closeSearch').on( 'click', function (event) {
+            $('body').removeClass('search-opening');
+            event.stopPropagation();
         });
 
-      
+        $('#searchBox').click('input', function () {
+            $('body').addClass('search-opening');
+        });
+
+        
+        
+    }
+
 
 })
