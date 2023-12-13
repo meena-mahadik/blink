@@ -114,7 +114,7 @@ textarea {
 }
 
 .product-card h5 {
-  font-size: 14;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -397,6 +397,17 @@ header {
   width: 0;
 }
 
+@media (max-width: 768px) {
+  .tab-heading li a.active {
+    font-size: 21px;
+    padding: 5px 24px;
+  }
+
+  .view-all {
+    font-size: 14px;
+  }
+}
+
 .header-action-list>div:not(:last-child) {
   -webkit-margin-end: 30px;
   margin-inline-end: 20px;
@@ -506,35 +517,9 @@ header {
 /* .product-card:first-child::before{
    background-color: transparent                                                                                                                                            ;
 } */
-.no-divider.product-card:before {
-  background-color: transparent;
-}
 
-@media (min-width: 1023px) {
 
-  .category .product-card-wrap div:nth-child(3n + 5) .product-card::before,
-  .product-card-wrap div:nth-child(1) .product-card::before {
-    background-color: transparent;
-  }
-}
 
-@media (max-width: 1024px) {
-
-  .category .product-card-wrap div:nth-child(3n + 4) .product-card::before,
-  .product-card-wrap div:nth-child(1) .product-card::before {
-    background-color: transparent;
-  }
-}
-
-@media (max-width: 768px) {
-  .category .product-card-wrap .product-card::before {
-    background-color: transparent;
-  }
-
-  .category .product-card-wrap div:nth-child(2n) .product-card::before {
-    background-color: #ddd;
-  }
-}
 
 
 .product-vendor {
@@ -557,6 +542,48 @@ header {
 .product-card_vendor-title a {
   font-weight: 500;
   font-size: 17px;
+}
+
+@media (min-width: 1023px) {
+
+  .category .product-card-wrap div:nth-child(3n + 5) .product-card::before,
+  .product-card-wrap div:nth-child(1) .product-card::before {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .category .product-card-wrap div:nth-child(3n + 4) .product-card::before,
+  .product-card-wrap div:nth-child(1) .product-card::before {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .category .product-card-wrap div:nth-child(3n + 4) .product-card::before,
+  .product-card-wrap div:nth-child(1) .product-card::before {
+    background-color: transparent;
+  }
+
+  .product-card_vendor-title a {
+    font-size: 16px;
+  }
+
+  .product-card .product-vendor {
+    margin: 0;
+  }
+
+  .product-price .price-sale h3 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .product-card span.bl_disct {
+    font-size: 11px;
+    height: 17px;
+  }
 }
 
 /*Login Form*/
@@ -1935,7 +1962,7 @@ footer .newsletter-container .newsletter-title svg {
   margin: 0 0 12px;
 }
 
-.section-footer-widget menu-list a {
+.section-footer-widget .menu-list a {
   font-size: 14px;
   letter-spacing: .17px;
   font-family: Montserrat;
@@ -2512,6 +2539,7 @@ footer .newsletter-container .newsletter-title svg {
   padding: 5px;
   border-radius: 0 !important;
   cursor: pointer;
+  margin-right: 8px !important;
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -2538,6 +2566,7 @@ footer .newsletter-container .newsletter-title svg {
   padding: 0 0 15px;
   border: 0;
   font-size: 14px;
+  display: flex;
 }
 
 .list-group-item:last-child {
@@ -2671,7 +2700,6 @@ footer .newsletter-container .newsletter-title svg {
   display: flex;
   flex-flow: row nowrap;
   padding: 0;
-  min-width: 224px;
   background-color: #fff;
   margin: 0;
   border-radius: 2px;
@@ -2742,7 +2770,7 @@ footer .newsletter-container .newsletter-title svg {
 }
 
 .search-autocomplete .search-right-region ul li {
-  width: 50%;
+  width: 33.33%;
 }
 
 .search-autocomplete .group-listing::after {
@@ -2774,7 +2802,7 @@ footer .newsletter-container .newsletter-title svg {
 }
 
 .search-right-region {
-  width: 576px;
+  width: calc(100% - 224px);
   background-color: #fff;
 }
 
@@ -2863,6 +2891,11 @@ footer .newsletter-container .newsletter-title svg {
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .search-autocomplete .search-right-region ul li {
+    width: 100%;
+  }
+}
 
 @media (max-width: 768px) {
 
@@ -2894,9 +2927,8 @@ footer .newsletter-container .newsletter-title svg {
     padding-right: 15px;
   }
 
-  .search-autocomplete .search-right-region ul li {
-    width: 100%;
-}
+
+
 }
 
 .slider-range-amount {
@@ -2965,40 +2997,40 @@ footer .newsletter-container .newsletter-title svg {
 
 .search-opening .header-search {
   position: fixed;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    height: 100Vh;
-    left: 0;
-    right: 0;
-    margin: 0;
-    overflow: scroll;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100Vh;
+  left: 0;
+  right: 0;
+  margin: 0;
+  overflow: scroll;
 }
 
 
-.search-opening .header-search form input  {
+.search-opening .header-search form input {
   font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400;
-    letter-spacing: normal;
-    width: calc(100vw - 68px);
-    height: 44px;
-    display: inline-block;
-    padding: 10px 46px 10px 18px;
-    margin: 0;
-    color: #202223;
-    background-color: #fbfbfb;
-    border: 1px solid rgba(34,34,34,.2);
-    border-radius: 50px;
-    text-align: left;
-    text-transform: none;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: normal;
+  width: calc(100vw - 68px);
+  height: 44px;
+  display: inline-block;
+  padding: 10px 46px 10px 18px;
+  margin: 0;
+  color: #202223;
+  background-color: #fbfbfb;
+  border: 1px solid rgba(34, 34, 34, .2);
+  border-radius: 50px;
+  text-align: left;
+  text-transform: none;
 }
 
 .search-opening .search-close-mobile {
   display: block;
   width: 48px;
   height: 25px;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   background-image: url(../img/back-button.svg);
   background-position: center center;
   background-size: 16px;
@@ -3018,13 +3050,32 @@ footer .newsletter-container .newsletter-title svg {
   width: 100%;
   padding: 20px 0;
 }
+
 .search-opening .header-logo {
   display: none;
 }
 
-.search-opening .header-search{
+.search-opening .header-search {
   padding-top: 0;
 }
+
 .search-opening .btn-1 {
   display: none;
 }
+
+ .offcanvas-end {
+  width: 350px;
+}
+
+.refind-btn svg {
+  width: 20px;
+  margin: 0 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  .left-search-filter {
+    height: 100vh;
+    overflow: auto;
+    display: none;
+  }
+} 
