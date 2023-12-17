@@ -147,10 +147,10 @@ $(document).ready(function () {
 
 
     // sort by toggle
-    $('.sort-by .seleted-value').click(function (event) {
-        $(this).parent('.sort-by').toggleClass('open');
-        event.stopPropagation();
-    });
+    // $('.sort-by .seleted-value').click(function (event) {
+    //     $(this).parent('.sort-by').toggleClass('open');
+    //     event.stopPropagation();
+    // });
     $(document).on('click', function () {
         $('.sort-by .seleted-value').parent('.sort-by').removeClass('open');
     });
@@ -196,29 +196,11 @@ $(document).ready(function () {
     }
 
 
-    var options = {
-        zoom: {
-            width: 100,
-            height: 100,
-            zIndex: 600
-        },
-        overlay: {
-            opacity: 0.65,
-            zIndex: 500,
-            backgroundColor: '#000000',
-            fade: true
-        },
-        detail: {
-            zIndex: 600,
-            margin: {
-                top: 0,
-                left: 10
-            },
-            fade: true
-        }
-    };
-    jQuery(document).ready(function() {
-        jQuery('.imgZoom').mooZoom(options);
+    $('.zoom-img').ezPlus({
+        zoomWindowFadeIn: 500,
+        zoomWindowFadeOut: 500,
+        lensFadeIn: 500,
+        lensFadeOut: 500
     });
 
 })

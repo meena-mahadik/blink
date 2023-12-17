@@ -1168,103 +1168,108 @@
 
                     </div>
                     <div class="col-lg-10 col-md-8 col-12">
-                        <div class="total-search-count d-flex">
-
-                            <div class="found-result">Found (8)</div>
+                        <div class="total-search-count  border-bottom">
+                            <span>
+                            Showing 8 of 100 results for 
+                        </span>
+                        <div class="d-flex">
                             <span class="refind-btn d-lg-none d-md-none" data-bs-toggle="offcanvas"
-                                href="#openfilterDrawer" id="refindButton">
-                                Refined:
+                            href="#openfilterDrawer" id="refindButton">
+                            Refined:
+                            <svg width="20" height="20" viewBox="0 0 256 256">
+                                <path fill="none" d="M0 0h256v256H0z"></path>
+                                <path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="12" d="M148 172H40M216 172h-28"></path>
+                                <circle cx="168" cy="172" r="20" fill="none" stroke="#111112" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="12"></circle>
+                                <path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="12" d="M84 84H40M216 84h-92"></path>
+                                <circle cx="104" cy="84" r="20" fill="none" stroke="#111112" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="12"></circle>
+                            </svg>
+                        </span>
+                        <div class="sort-by d-lg-block d-none d-flex">
+                            <span>SORT BY:</span>
+                            <ul class="d-flex">
+                                <li>Relevance</li>
+                                <li>New In</li>
+                                <li>Best selling</li>
+                                <li>Price Low To High</li>
+                                <li>Price High To Low</li>
+                            </ul>
+                        </div>
+                        <div class="d-lg-none d-md-none ms-auto">
+                            <span class="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">SORT BY
                                 <svg width="20" height="20" viewBox="0 0 256 256">
                                     <path fill="none" d="M0 0h256v256H0z"></path>
-                                    <path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="12" d="M148 172H40M216 172h-28"></path>
-                                    <circle cx="168" cy="172" r="20" fill="none" stroke="#111112" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="12"></circle>
-                                    <path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="12" d="M84 84H40M216 84h-92"></path>
-                                    <circle cx="104" cy="84" r="20" fill="none" stroke="#111112" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="12"></circle>
+                                    <path fill="none" stroke="#111112" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="12"
+                                        d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path>
                                 </svg>
                             </span>
+                            <div class="offcanvas offcanvas-bottom sorting-mobile-view" tabindex="-1"
+                                id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header pb-2 pt-2 border-bottom d-flex align-items-center">
+                                    <h5 id="offcanvasRightLabel" class="m-0">Sort By </h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul>
+                                        <li>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label" for="inlineRadio1">Relevance</label>
+                                                <input class="form-check-input" type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio1" value="option1">
 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label" for="inlineRadio2">New In</label>
+                                                <input class="form-check-input" type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio2" value="option2">
 
-                            <div class="sort-by ms-auto d-lg-block d-none">
-                                <span>SORT BY:</span><span class="seleted-value">Relevance <i
-                                        class="fa-solid fa-angle-down"></i></span>
-                                <ul>
-                                    <li>Relevance</li>
-                                    <li>New In</li>
-                                    <li>Best selling</li>
-                                    <li>Price Low To High</li>
-                                    <li>Price High To Low</li>
-                                </ul>
-                            </div>
-                            <div class="d-lg-none d-md-none ms-auto">
-                                <span class="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                                    aria-controls="offcanvasRight">SORT BY
-                                    <svg width="20" height="20" viewBox="0 0 256 256">
-                                        <path fill="none" d="M0 0h256v256H0z"></path>
-                                        <path fill="none" stroke="#111112" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="12"
-                                            d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path>
-                                    </svg>
-                                </span>
-                                <div class="offcanvas offcanvas-bottom sorting-mobile-view" tabindex="-1"
-                                    id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                    <div class="offcanvas-header pb-2 pt-2 border-bottom d-flex align-items-center">
-                                        <h5 id="offcanvasRightLabel" class="m-0">Sort By </h5>
-                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="offcanvas-body">
-                                        <ul>
-                                            <li>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label" for="inlineRadio1">Relevance</label>
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label" for="inlineRadio3">Best
+                                                    selling</label>
+                                                <input class="form-check-input" type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio3" value="option3">
 
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label" for="inlineRadio2">New In</label>
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label" for="inlineRadio3">Price Low To
+                                                    High</label>
+                                                <input class="form-check-input" type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio4" value="option3">
 
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label" for="inlineRadio3">Best
-                                                        selling</label>
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label" for="inlineRadio3">Price Low To
-                                                        High</label>
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio4" value="option3">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio5" value="option3">
-                                                    <label class="form-check-label" for="inlineRadio3">Price High To
-                                                        Low</label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio5" value="option3">
+                                                <label class="form-check-label" for="inlineRadio3">Price High To
+                                                    Low</label>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
+                        </div>
+                            
+
+
+                            
+                           
 
 
                         </div>

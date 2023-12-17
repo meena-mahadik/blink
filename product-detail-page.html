@@ -26,7 +26,7 @@
     <link href="css/slick-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap-drawer.css"> -->
+     <!-- <link rel="stylesheet" href="css/bootstrap-drawer.css"> -->
 </head>
 
 <body>
@@ -972,8 +972,12 @@
                                     </div>
                                 </div>
                                 <div class="slider slider-for">
-                                    <div class="slider-banner-image">
-                                        <img src="img/small-thumbnail-1.jpg" class="imgZoom" alt="thumbnail-1"  ref="img/small-thumbnail-1.jpg">
+                                   
+                                    <div class="slider-banner-image zoom-box">
+                                        <img class="zoom-img" 
+                                        src="img/small-thumbnail-1.jpg"
+                                        data-zoom-image="img/small-thumbnail-1.jpg"
+                                        width="411"/>
                                     </div>
                                     <div class="slider-banner-image">
                                         <img src="img/small-thumbnail-2.jpg" class="imgZoom" alt="thumbnail-1" ref="img/small-thumbnail-2.jpg">
@@ -989,7 +993,7 @@
 
             <!-- footer Start -->
         </div>
-        <footer class="footer">
+                <footer class="footer">
             <section>
                 <div class="footer-content">
                     <div class="newsletter-container">
@@ -1579,8 +1583,7 @@
     <!-- mobile view menu -->
     <script src="js/bootstrap-drawer.js"></script>
     <!-- sliding tab -->
-    <!-- <script type="text/javascript" src="https://lopatin.github.io/sliderTabs/jquery.sliderTabs.min.js"></script> -->
-    <script type="text/javascript" src="js/jQuery-mooZoom-1.0.0.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
     <script src="js/style.js"></script>
 </body>
 
