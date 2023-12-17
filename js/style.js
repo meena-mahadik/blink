@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    $(window).on('resize',function(){location.reload();});
+    $(window).on('resize', function () { location.reload(); });
 
 
     // carousel  
@@ -60,46 +60,41 @@ $(document).ready(function () {
         arrows: false,
         fade: true,
         asNavFor: '.slider-nav'
-      });
-      $('.slider-nav').slick({
+    });
+    $('.slider-nav').slick({
         slidesToShow: 8,
         slidesToScroll: 2,
         asNavFor: '.slider-for',
         dots: false,
         centerMode: false,
-        vertical:true,
+        vertical: true,
         focusOnSelect: true,
-    // verticalSwiping:true,
-    infinite: false,
-    responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-              vertical: false,
-            }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            vertical: false,
-          }
-        },
-        {
-          breakpoint: 580,
-          settings: {
-            vertical: false,
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 380,
-          settings: {
-            vertical: false,
-            slidesToShow: 2,
-          }
-        }
+        // verticalSwiping:true,
+        infinite: false,
+        responsive: [
+            // {
+            //     breakpoint: 992,
+            //     settings: {
+            //         vertical: false,
+            //         dots: false,
+            //     }
+            // },
+            // {
+            //     breakpoint: 768,
+            //     settings: {
+            //         dots: true,
+            //         vertical: false,
+            //     }
+            // },
+            // {
+            //     breakpoint: 580,
+            //     settings: {
+            //         dots: true,
+            //         vertical: false,
+            //     }
+            // }
         ]
-      });
+    });
 
 
 
@@ -165,11 +160,11 @@ $(document).ready(function () {
         $('.search-autocomplete').css('display', 'none');
     });
 
-    
+
 
     if ($(window).width() < 767) {
 
-        $('#closeSearch').on( 'click', function (event) {
+        $('#closeSearch').on('click', function (event) {
             $('body').removeClass('search-opening');
             $('.search-autocomplete').css('display', 'none');
             event.stopPropagation();
@@ -178,16 +173,16 @@ $(document).ready(function () {
         $('#searchBox').click('input', function () {
             $('body').addClass('search-opening');
             $('.search-autocomplete').css('display', 'flex');
-        });    
-        
-        
-        
+        });
+
+
+
     }
     if ($(window).width() < 420) {
         $('#refindButton').on('click', function () {
-            $('.left-search-filter').css('display','block')
+            $('.left-search-filter').css('display', 'block')
             $('.left-search-filter').addClass('offcanvas offcanvas-end');
-        }); 
+        });
 
         $('#sortButton').on('click', function () {
             // $('.sort-filter').css('display','block')
@@ -197,10 +192,44 @@ $(document).ready(function () {
 
 
     $('.zoom-img').ezPlus({
-        zoomWindowFadeIn: 500,
-        zoomWindowFadeOut: 500,
+        zoomWindowFadeIn: 100,
+        zoomWindowFadeOut: 100,
+        zoomWindowHeight: 500,
+        zoomWindowWidth: 500,
         lensFadeIn: 500,
-        lensFadeOut: 500
+        lensFadeOut: 500,
     });
+
+    $('input[name="colorOptions"]').on('change', function() {
+        var selectedValue = $('input[name="colorOptions"]:checked').val();
+        $('#colorVarient').text(selectedValue);
+      });
+
+      $('input[name="capacityOptions"]').on('change', function() {
+        var selectedValue = $('input[name="capacityOptions"]:checked').val();
+        $('#capacity').text(selectedValue);
+      });
+
+      
+
+
+      var counterValue = 0;
+      // Update the value in the counter div
+      function updateCounter() {
+        $('#counter').val(counterValue);     }
+
+      // Plus button click event
+      $('#plusBtn').on('click', function() {
+        counterValue++;
+        updateCounter();
+      });
+
+      // Minus button click event
+      $('#minusBtn').on('click', function() {
+        if (counterValue > 0) {
+          counterValue--;
+          updateCounter();
+        }
+      });
 
 })

@@ -45,7 +45,7 @@
                                     <img class="responsively-lazy logo" src="img/blink-logo.png" alt="logo">
                                 </a>
 
-                                <div class="header-search d-header-search js-header-search d-lg-block" id="searchBox">
+                                <div class="header-search d-header-search d-lg-block" id="searchBox">
                                     <div class="justify-content-center mb-md-0 w-100">
                                         <form class="search-form">
                                             <button class="search-close-mobile" id="closeSearch">Close</button>
@@ -535,7 +535,7 @@
                             </div> -->
                                         <div class="header-action-item header-cart d-lg-block d-none">
                                             <a href="/cart"
-                                                class="d-flex js-header-cart-icon--desktop effect-open_cart">
+                                                class="d-flex effect-open_cart">
                                                 <div
                                                     class="header-action-item_group header-cart_icon position-relative">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -558,7 +558,7 @@
                                                             </path>
                                                         </g>
                                                     </svg>
-                                                    <div class="number position-absolute js-cart-item-count">0</div>
+                                                    <div class="number position-absolute">0</div>
                                                 </div>
                                                 <div class="header-action-item_group">
 
@@ -1167,12 +1167,11 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-10 col-md-8 col-12">
-                        <div class="total-search-count  border-bottom">
-                            <span>
-                            Showing 8 of 100 results for 
-                        </span>
-                        <div class="d-flex">
+                    <div class="col-lg-10 col-md-8 col-12  mt-4">
+                        <div class="total-search-count border-bottom ">
+                           <span class="d-flex align-items-center">Showing 8 of 100 results for</span> 
+
+                        <div class="d-flex mobile-view-filter">
                             <span class="refind-btn d-lg-none d-md-none" data-bs-toggle="offcanvas"
                             href="#openfilterDrawer" id="refindButton">
                             Refined:
@@ -1187,82 +1186,84 @@
                                 <circle cx="104" cy="84" r="20" fill="none" stroke="#111112" stroke-linecap="round"
                                     stroke-linejoin="round" stroke-width="12"></circle>
                             </svg>
-                        </span>
-                        <div class="sort-by d-lg-block d-none d-flex">
-                            <span>SORT BY:</span>
-                            <ul class="d-flex">
-                                <li>Relevance</li>
-                                <li>New In</li>
-                                <li>Best selling</li>
-                                <li>Price Low To High</li>
-                                <li>Price High To Low</li>
-                            </ul>
-                        </div>
-                        <div class="d-lg-none d-md-none ms-auto">
-                            <span class="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                                aria-controls="offcanvasRight">SORT BY
-                                <svg width="20" height="20" viewBox="0 0 256 256">
-                                    <path fill="none" d="M0 0h256v256H0z"></path>
-                                    <path fill="none" stroke="#111112" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="12"
-                                        d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path>
-                                </svg>
                             </span>
-                            <div class="offcanvas offcanvas-bottom sorting-mobile-view" tabindex="-1"
-                                id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                <div class="offcanvas-header pb-2 pt-2 border-bottom d-flex align-items-center">
-                                    <h5 id="offcanvasRightLabel" class="m-0">Sort By </h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <ul>
-                                        <li>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label" for="inlineRadio1">Relevance</label>
-                                                <input class="form-check-input" type="radio"
-                                                    name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <div class="d-lg-block d-md-block d-none mt-3">
+                                <div class="                                            sort-by w-100 d-flex">
+                                <span>SORT BY:</span>
+                                <ul class="d-flex ">
+                                    <li class="active">Relevance</li>
+                                    <li>New In</li>
+                                    <li>Best selling</li>
+                                    <li>Price Low To High</li>
+                                    <li>Price High To Low</li>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="d-lg-none d-md-none">
+                                <span class="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight">SORT BY
+                                    <svg width="20" height="20" viewBox="0 0 256 256">
+                                        <path fill="none" d="M0 0h256v256H0z"></path>
+                                        <path fill="none" stroke="#111112" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="12"
+                                            d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path>
+                                    </svg>
+                                </span>
+                                <div class="offcanvas offcanvas-bottom sorting-mobile-view" tabindex="-1"
+                                    id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                    <div class="offcanvas-header pb-2 pt-2 border-bottom d-flex align-items-center">
+                                        <h5 id="offcanvasRightLabel" class="m-0">Sort By </h5>
+                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul>
+                                            <li>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label" for="inlineRadio1">Relevance</label>
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
 
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label" for="inlineRadio2">New In</label>
-                                                <input class="form-check-input" type="radio"
-                                                    name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label" for="inlineRadio2">New In</label>
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
 
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label" for="inlineRadio3">Best
-                                                    selling</label>
-                                                <input class="form-check-input" type="radio"
-                                                    name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label" for="inlineRadio3">Best
+                                                        selling</label>
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3">
 
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label" for="inlineRadio3">Price Low To
-                                                    High</label>
-                                                <input class="form-check-input" type="radio"
-                                                    name="inlineRadioOptions" id="inlineRadio4" value="option3">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label" for="inlineRadio3">Price Low To
+                                                        High</label>
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio4" value="option3">
 
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio"
-                                                    name="inlineRadioOptions" id="inlineRadio5" value="option3">
-                                                <label class="form-check-label" for="inlineRadio3">Price High To
-                                                    Low</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio5" value="option3">
+                                                    <label class="form-check-label" for="inlineRadio3">Price High To
+                                                        Low</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                         </div>
                             
@@ -1276,7 +1277,7 @@
                         <!-- Products slider Start-->
                         <section class="category">
                             <div class="row product-card-wrap">
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
@@ -1310,7 +1311,7 @@
                                         </footer>
                                     </product-card>
                                 </div>
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
@@ -1344,7 +1345,7 @@
                                         </footer>
                                     </product-card>
                                 </div>
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
@@ -1378,7 +1379,7 @@
                                         </footer>
                                     </product-card>
                                 </div>
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
@@ -1412,7 +1413,7 @@
                                         </footer>
                                     </product-card>
                                 </div>
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
@@ -1446,7 +1447,7 @@
                                         </footer>
                                     </product-card>
                                 </div>
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
@@ -1480,7 +1481,7 @@
                                         </footer>
                                     </product-card>
                                 </div>
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
@@ -1514,7 +1515,7 @@
                                         </footer>
                                     </product-card>
                                 </div>
-                                <div class="col-lg-3  col-md-4 col-sm-4 col-6">
+                                <div class="col-lg-3  col-md-6 col-sm-4 col-6">
                                     <product-card class="product-card">
                                         <header class="product-card_header">
                                             <figure class="product-img">
