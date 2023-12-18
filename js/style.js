@@ -249,12 +249,12 @@ $(document).ready(function () {
         // });       
     }
 
-    let magnifyHeight = $('.product-info_details').height() - 30;
-    let magnifyWidth = $('.product-info_details').width() + 20
+    // let magnifyHeight = $('.product-info_details').height()/2;
+    let magnifyWidth = $('.product-info_details').width()/2
     $('#zoom1').ezPlus({
         zoomWindowFadeIn: 100,
         zoomWindowFadeOut: 100,
-        zoomWindowHeight: magnifyHeight,
+        zoomWindowHeight: 500,
         zoomWindowWidth: magnifyWidth,
         lensFadeIn: 500,
         lensFadeOut: 500,
