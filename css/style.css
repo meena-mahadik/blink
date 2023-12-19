@@ -3168,10 +3168,10 @@ width: 64px;
   max-width: 50%;
 } */
 
-.banner-slider {
+.thumbnail-slider {
   position: -webkit-sticky;
   position: sticky;
-  top: 150px;
+  /* top: 150px; */
 }
 
 .slick-vertical .slick-list {
@@ -3184,22 +3184,22 @@ width: 64px;
   margin: 0 auto;
 }
 
-.slick-vertical .banner-slider .slider.slider-for {
+.slick-vertical .thumbnail-slider .slider.slider-for {
   max-width: 84%;
   padding-right: 35px;
 }
 
-.slick-vertical .banner-slider .slider.slider-nav {
+.slick-vertical .thumbnail-slider .slider.slider-nav {
   max-width: 16%;
 }
 
-.slick-vertical .banner-slider .slider.slider-for,
-.slick-vertical .banner-slider .slider.slider-nav {
+.slick-vertical .thumbnail-slider .slider.slider-for,
+.slick-vertical .thumbnail-slider .slider.slider-nav {
   width: 100%;
   float: left;
 }
 
-.slick-vertical .banner-slider .slider.slider-nav {
+.slick-vertical .thumbnail-slider .slider.slider-nav {
   height: 450px;
   overflow: hidden;
 
@@ -3209,7 +3209,7 @@ width: 64px;
   height: 450px;
 }
 
-.slick-vertical .banner-slider .slider.slider-nav {
+.slick-vertical .thumbnail-slider .slider.slider-nav {
   padding: 20px 0 0;
 }
 
@@ -3298,17 +3298,17 @@ width: 64px;
 
 @media screen and (max-width : 991px) {
 
-  .banner-slider .slider.slider-for,
-  .banner-slider .slider.slider-nav {
+  .thumbnail-slider .slider.slider-for,
+  .thumbnail-slider .slider.slider-nav {
     max-width: 100%;
     float: none;
   }
 
-  .banner-slider .slider.slider-for {
+  .thumbnail-slider .slider.slider-for {
     padding-right: 0;
   }
 
-  .banner-slider .slider.slider-nav {
+  .thumbnail-slider .slider.slider-nav {
     height: auto;
   }
 
@@ -3366,12 +3366,12 @@ width: 64px;
     float: none;
   }
 
-  .slick-vertical .banner-slider .slider.slider-for {
+  .slick-vertical .thumbnail-slider .slider.slider-for {
     max-width: calc(100% - 70px);
     padding-right: 35px;
   }
 
-  .slick-vertical .banner-slider .slider.slider-nav {
+  .slick-vertical .thumbnail-slider .slider.slider-nav {
     max-width: 70px;
   }
 }
@@ -3844,3 +3844,103 @@ quantity-input quantity-input-plus {
 .custom-card p {
   font-size: 13px;
 }
+
+.ZoomContainer {
+  height: 100vh !important;
+}
+
+
+/*Rating*/
+.detailed-rating-container .heading {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 30px 0 20px;
+}
+
+.detailed-rating-container .average-rating {
+  font-size: 38px;
+  color: #282c3f;
+}
+
+.detailed-rating-container .average-rating .rating {
+  color: #14958f;
+  font-size: 30px;
+  margin: 10px 0 0 10px;
+}
+
+.detailed-rating-container .count {
+  font-size: 12px;
+  font-weight: 400;
+  color: #282c3f;
+}
+
+.detailed-rating-container .separator {
+  border-right: 1.2px solid #eaeaec;
+  padding: 0 30px 0 0;
+}
+
+.detailed-rating-container .rating-wrapper .rating {
+  margin-left: 40px;
+}
+
+.detailed-rating-container .rating-wrapper .rating-icon {
+  margin: 0 5px 0 10px;
+  font-size: 12px;
+  color: #a9abb3;
+}
+
+.detailed-rating-container .rating-wrapper .count {
+  margin-left: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #282c3f;
+}
+
+
+.detailed-rating-container .rating-wrapper progress::-webkit-progress-bar {
+  background: #f5f5f6;
+}
+
+.detailed-rating-container .rating-wrapper .rating {    font-size: 14px;
+  color: #a9abb3;}
+
+  .detailed-rating-container .rating-wrapper .rating-level {
+  font-size: 14px;
+  color: #a9abb3;
+  width: 7px;
+}
+
+.detailed-rating-container .rating-wrapper .rating {
+  color: #d5d5da;
+  font-size: 10px;
+  /* margin: 10px 0 0 10px; */
+}
+
+.detailed-rating-container .rating-wrapper  {
+  width: 300px;
+}
+
+.detailed-rating-container .rating-wrapper .progress {
+  background: #f5f5f6;
+  height: 5px;
+  border-radius: 0;
+  margin: 6px 0;
+}
+.detailed-rating-container .rating-wrapper .progress-bar[data-rating="5"], .detailed-rating-container .rating-wrapper .progress-bar[data-rating="4"] {
+  background: #14958f;
+}
+
+.detailed-rating-container .rating-wrapper .progress-bar .progress-bar[data-rating="3"] {
+  background: #72bfbc;
+}
+
+.detailed-rating-container .rating-wrapper .progress-bar[data-rating="2"] {
+  background: #fcb301;
+}
+
+.detailed-rating-container .rating-wrapper .progress-bar[data-rating="1"] {
+  background: #f16565;
+}
+
+
+

@@ -156,12 +156,14 @@ $(document).ready(function () {
             // Scrolling up
             $('.sticky').addClass('fixed');
             $('.banner, .subcategories').css('margin-top', headerHeight);
+            $('.thumbnail-slider').css('top', 150);
 
 
         } else {
             // Scrolling down
             $('.sticky').removeClass('fixed');
             $('.banner, .subcategories').css('margin-top', 0);
+            $('.thumbnail-slider').css('top', 10);
         }
         lastScrollTop = st;
     });
@@ -249,20 +251,21 @@ $(document).ready(function () {
         // });       
     }
 
-    // let magnifyHeight = $('.product-info_details').height()/2;
-    let magnifyWidth = $('.product-info_details').width()/2
-    $('#zoom1').ezPlus({
+    let magnifyHeight = $('.product-info').height() / 2;
+    let magnifyWidth = $('.product-info').width()
+    $('.zoom-img').ezPlus({
         zoomWindowFadeIn: 100,
         zoomWindowFadeOut: 100,
         zoomWindowHeight: 500,
         zoomWindowWidth: magnifyWidth,
         lensFadeIn: 500,
         lensFadeOut: 500,
+
     });
     $('#zoom-img-2').ezPlus({
     });
 
-    
+
 
     $('input[name="colorOptions"]').on('change', function () {
         var selectedValue = $('input[name="colorOptions"]:checked').val();
@@ -295,4 +298,62 @@ $(document).ready(function () {
         }
     });
 
+
+
+
+    // Review galary
+    $('.review-lightbox img').on('click', function () {
+        document.getElementById("myModal").style.display = "block";
+        let n =  $(this).index();;
+        showSlides(slideIndex += n);
+    })
+
+
+    $('#closeModal').on('click', function () {
+        document.getElementById("myModal").style.display = "none";
+    })
+
+
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    $('#prev').on('click', function () {        
+        let n =  $(this).index() - 1;
+        showSlides(slideIndex += n);
+        plusSlides(n)
+    })
+
+    $('#next').on('click', function () {
+        let n =  $(this).index() + 1;
+        showSlides(slideIndex += n);
+    })
+
+
+    function plusSlides(n) {
+        slideIndex = slideIndex + n;
+        showSlides(slideIndex);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var slides = $('.mySlides');
+        var dots = $('.demo');
+        var captionText = $('#caption');
+        var slideIndex = 1;
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        slides.hide();
+        dots.removeClass('active');
+        slides.eq(slideIndex - 1).show();
+        dots.eq(slideIndex - 1).addClass('active');
+        captionText.html(slides.eq(slideIndex - 1).attr('alt'));
+      }
 })
