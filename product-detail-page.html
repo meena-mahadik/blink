@@ -1000,7 +1000,7 @@
                                 </div>
                             </div> -->
                         </div>
-                        <div class="slider slider-for">
+                        <div class="slider product-detail-slider slider-for">
                             <div class="slider-banner-image">
                                 <img class="zoom-img" src="img/small-thumbnail-1.jpg"
                                     data-zoom-image="img/small-thumbnail-1.jpg" alt="thumbnail-1" />
@@ -1314,7 +1314,7 @@
 
                         <h3 class="mt-3">Shipping Info</h3>
                         <!-- <h5>Delivery Option(s) - Kuwait</h5> -->
-                        <ul class="w-100 ">
+                        <ul class="w-100">
                             <li>Express Delivery (within 4 hours)</li>
                             <li>Next Working Day Delivery</li>
                             <li>Same Day Delivery</li>
@@ -1324,7 +1324,7 @@
                         </ul>
 
 
-                        <h3 class="mt-3"> Product Description</h3>
+                        <h3 class="mt-3 border-top pt-3"> Product Description</h3>
                         <div class="position-relative">
                             <h2 class="pt-0">The Apple iPhone 15 Plus!</h2>
                             <div class="custom-card d-flex">
@@ -1803,9 +1803,7 @@
                                 </tbody>
                             </table>
 
-
-
-                            <div class="detailed-rating-container">
+                            <div class="detailed-rating-container border-bottom pt-4 pb-4">
                                 <div class="heading"> Ratings & Reviews </div>
                                 <div class="d-flex mt-2">
                                     <div class="d-flex flex-column separator">
@@ -1883,56 +1881,457 @@
                                             <div class="count">8</div>
                                         </div>
                                     </div>
+
+                                    <!-- <div class="progress-bar-circle">
+                                        <progress value="30" min="0" max="100" style="visibility:hidden;height:0;width:0;">30%</progress>
+                                      </div> -->
                                 </div>
-                                <div class="row review-lightbox" >
-                                    <div class="column">
-                                      <img src="img/small-thumbnail-1.jpg" style="width:100%"  class="hover-shadow cursor">
+                                <h2>Images uploaded by customers:</h2>
+                                <div class="review-gallary">
+                                    <div class="review-thumbnails d-flex">
+                                        <div class="review">
+                                            <img src="img/thumbnail-1.jpg" index="1" class="hover-shadow cursor">
+                                        </div>
+                                        <div class="review">
+                                            <img src="img/thumbnail-2.jpg" index="2" class="hover-shadow cursor">
+                                        </div>
+                                        <div class="review">
+                                            <img src="img/thumbnail-3.jpg" index="3" class="hover-shadow cursor">
+                                        </div>
+                                        <div class="review">
+                                            <img src="img/thumbnail-1.jpg" index="4" class="hover-shadow cursor">
+                                            <div class="overlay">+5</div>
+                                        </div>
+                                        <!-- <div class="review">
+                                            <img src="img/thumbnail-2.jpg" index="4" class="hover-shadow cursor">
+                                            
+                                        </div> -->
+                                        <!-- <div class="review">
+                                            <img src="img/thumbnail-3.jpg" index="6" class="hover-shadow cursor">
+                                        </div> -->
                                     </div>
-                                    <div class="column">
-                                      <img src="img/small-thumbnail-2.jpg" style="width:100%"  class="hover-shadow cursor">
+
+                                    <div id="myModal" class="modal">
+
+                                        <div class="modal-content">
+                                            <i class="fa-solid fa-xmark close ms-auto" id="closeModal"></i>
+                                            <div class="mySlides">
+                                                <div class="d-flex h-100">
+                                                    <div class="image-wrapper justify-content-center">
+                                                        <div class="d-flex">
+                                                            <div class="numbertext">1 / 6</div>
+                                                        </div>
+                                                        <img src="img/thumbnail-1.jpg" alt="gallery">
+                                                    </div>
+                                                    <div class="review-wrapper">
+                                                        <div class="product-info_reviews d-flex">
+                                                            <span class="review">4 <img class="rating-icon"
+                                                                    src="img/start-icon.svg" alt="rating icon">
+                                                            </span>Mind-blowing purchase
+                                                        </div>
+                                                        <div class="user-comment">High quality camera 😍</div>
+                                                        <div class="user-review-footer d-flex">
+                                                            <div class="user-review-left">
+                                                                <span class="user-name text-truncate"> Narendra Saini
+                                                                    aaaaaaaaaa</span>
+                                                                <span>12 Aug 2023</span>
+                                                            </div>
+                                                            <div class="user-review-votes">
+                                                                <div class="user-review-thumb">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                        height="14" viewBox="0 0 15 14"
+                                                                        class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
+                                                                        <g fill="none" fill-rule="evenodd">
+                                                                            <path d="M-5-8h24v24H-5z"></path>
+                                                                            <path fill="#535766" fill-rule="nonzero"
+                                                                                d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                            </path>
+                                                                        </g>
+                                                                    </svg>1
+                                                                </div>
+                                                                <div class="user-review-thumb"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                        height="14" viewBox="0 0 15 14"
+                                                                        class="user-review-thumbIcon">
+                                                                        <g fill="none" fill-rule="evenodd">
+                                                                            <path d="M-5-8h24v24H-5z"></path>
+                                                                            <path fill="#535766" fill-rule="nonzero"
+                                                                                d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                            </path>
+                                                                        </g>
+                                                                    </svg>0
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mySlides">
+                                                <div class="d-flex h-100">
+                                                    <div class="image-wrapper justify-content-center">
+                                                        <div class="d-flex">
+                                                            <div class="numbertext">2 / 6</div>
+                                                        </div>
+                                                        <img src="img/thumbnail-2.jpg" alt="gallery">
+                                                    </div>
+                                                    <div class="review-wrapper">
+                                                        <div class="product-info_reviews d-flex">
+                                                            <span class="review">3 <img class="rating-icon"
+                                                                    src="img/start-icon.svg" alt="rating icon">
+                                                            </span>Mind-blowing purchase
+                                                        </div>
+                                                        <div class="user-comment">Good choice</div>
+                                                        <div class="user-review-footer d-flex">
+                                                            <div class="user-review-left">
+                                                                <span>Mousam Gu</span>
+                                                                <span>1 month ago</span>
+                                                            </div>
+                                                            <div class="user-review-votes">
+                                                                <div class="user-review-thumb">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                        height="14" viewBox="0 0 15 14"
+                                                                        class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
+                                                                        <g fill="none" fill-rule="evenodd">
+                                                                            <path d="M-5-8h24v24H-5z"></path>
+                                                                            <path fill="#535766" fill-rule="nonzero"
+                                                                                d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                            </path>
+                                                                        </g>
+                                                                    </svg>1
+                                                                </div>
+                                                                <div class="user-review-thumb"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                        height="14" viewBox="0 0 15 14"
+                                                                        class="user-review-thumbIcon">
+                                                                        <g fill="none" fill-rule="evenodd">
+                                                                            <path d="M-5-8h24v24H-5z"></path>
+                                                                            <path fill="#535766" fill-rule="nonzero"
+                                                                                d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                            </path>
+                                                                        </g>
+                                                                    </svg>0
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mySlides">
+                                                <div class="d-flex h-100">
+                                                    <div class="image-wrapper justify-content-center">
+                                                        <div class="d-flex">
+                                                            <div class="numbertext">3 / 6</div>
+                                                        </div>
+                                                        <img src="img/thumbnail-3.jpg" alt="gallery">
+                                                    </div>
+                                                    <div class="review-wrapper">abc</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mySlides">
+                                                <div class="d-flex h-100">
+                                                    <div class="image-wrapper justify-content-center">
+                                                        <div class="d-flex">
+                                                            <div class="numbertext">4 / 6</div>
+                                                        </div>
+                                                        <img src="img/thumbnail-1.jpg" alt="gallery">
+                                                    </div>
+                                                    <div class="review-wrapper">abc</div>
+                                                </div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div class="d-flex h-100">
+                                                    <div class="image-wrapper justify-content-center">
+                                                        <div class="d-flex">
+                                                            <div class="numbertext">5 / 6</div>
+                                                        </div>
+                                                        <img src="img/thumbnail-2.jpg" alt="gallery">
+                                                    </div>
+                                                    <div class="review-wrapper">abc</div>
+                                                </div>
+                                            </div>
+                                            <div class="mySlides">
+                                                <div class="d-flex h-100">
+                                                    <div class="image-wrapper justify-content-center">
+                                                        <div class="d-flex">
+                                                            <div class="numbertext">6 / 6</div>
+                                                        </div>
+                                                        <img src="img/thumbnail-3.jpg" alt="gallery">
+                                                    </div>
+                                                    <div class="review-wrapper">abc</div>
+                                                </div>
+                                            </div>
+                                            <a class="prev" id="prev">&#10094;</a>
+                                            <a class="next" id="next">&#10095;</a>
+                                        </div>
                                     </div>
-                                    <div class="column">
-                                      <img src="img/small-thumbnail-3.jpg" style="width:100%"  class="hover-shadow cursor">
+                                </div>
+                            </div>
+
+                            <div class="without-gallery-review">
+                                <div class="review-wrapper border-bottom">
+                                    <div class="product-info_reviews d-flex">
+                                        <span class="review">4 <img class="rating-icon" src="img/start-icon.svg"
+                                                alt="rating icon">
+                                        </span>Mind-blowing purchase
                                     </div>
-                                    <div class="column">
-                                      <img src="img/small-thumbnail-4.jpg" style="width:100%" class="hover-shadow cursor">
+                                    <div class="user-comment">High quality camera 😍</div>
+                                    <div class="user-review-footer d-flex">
+                                        <div class="user-review-left">
+                                            <span class="user-name text-truncate"> Narendra Saini aaaaaaaaaa</span>
+                                            <span>12 Aug 2023</span>
+                                        </div>
+                                        <div class="user-review-votes">
+                                            <div class="user-review-thumb">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14"
+                                                    viewBox="0 0 15 14"
+                                                    class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path d="M-5-8h24v24H-5z"></path>
+                                                        <path fill="#535766" fill-rule="nonzero"
+                                                            d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                        </path>
+                                                    </g>
+                                                </svg>1
+                                            </div>
+                                            <div class="user-review-thumb"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="15" height="14" viewBox="0 0 15 14"
+                                                    class="user-review-thumbIcon">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path d="M-5-8h24v24H-5z"></path>
+                                                        <path fill="#535766" fill-rule="nonzero"
+                                                            d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                        </path>
+                                                    </g>
+                                                </svg>0
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
-                                  
-                                  <div id="myModal" class="modal">
-                                    <span class="close cursor" id="closeModal">&times;</span>
-                                    <div class="modal-content">
-                                  
-                                      <div class="mySlides">
-                                        <div class="numbertext">1 / 4</div>
-                                        <img src="img/small-thumbnail-1.jpg" style="width:50%">
-                                        <div style="width:50%">dsdsdsdsd</div>
-                                      </div>
-                                  
-                                      <div class="mySlides">
-                                        <div class="numbertext">1 / 4</div>
-                                        <img src="img/small-thumbnail-2.jpg" style="width:50%">
-                                        <div style="width:50%">dsdsdsdsd</div>
-                                      </div>
-                                  
-                                      <div class="mySlides">
-                                        <div class="numbertext">3 / 4</div>
-                                        <img src="img/small-thumbnail-3.jpg" style="width:100%">
-                                      </div>
-                                      
-                                      <div class="mySlides">
-                                        <div class="numbertext">4 / 4</div>
-                                        <img src="img/small-thumbnail-4.jpgg" style="width:100%">
-                                      </div>
-                                      
-                                      <a class="prev" id="prev">&#10094;</a>
-                                      <a class="next" id="next">&#10095;</a>
-                                  
-                                      <div class="caption-container">
-                                        <p id="caption"></p>
-                                      </div>
+                                </div>
+                                <div class="review-wrapper border-bottom">
+                                    <div class="product-info_reviews d-flex">
+                                        <span class="review">4 <img class="rating-icon" src="img/start-icon.svg"
+                                                alt="rating icon">
+                                        </span>Mind-blowing purchase
                                     </div>
-                                  </div>
+                                    <div class="user-comment">
+                                        <h5>Pros:</h5>
+                                        <ol>
+                                            <li>Incredibly smart device this year</li>
+                                            <li>iOS interface</li>
+                                            <li>Data Privacy</li>
+                                            <li>Premium build quality</li>
+                                            <li>Dynamic Island</li>
+                                            <li>Ecosystem benefits if you own other Apple devices</li>
+                                            <li>Powerful processor</li>
+                                        </ol>
+                                        <h5>Cons:</h5>
+                                        <ol>
+                                            <li>60Hz refresh rate for a flagship (although not very noticeable)</li>
+                                            <li>No improvements to Siri</li>
+                                        </ol>
+                                    </div>
+                                    <div class="user-review-footer d-flex">
+                                        <div class="user-review-left">
+                                            <span class="user-name text-truncate"> Narendra Saini aaaaaaaaaa</span>
+                                            <span>12 Aug 2023</span>
+                                        </div>
+                                        <div class="user-review-votes">
+                                            <div class="user-review-thumb">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14"
+                                                    viewBox="0 0 15 14"
+                                                    class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path d="M-5-8h24v24H-5z"></path>
+                                                        <path fill="#535766" fill-rule="nonzero"
+                                                            d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                        </path>
+                                                    </g>
+                                                </svg>1
+                                            </div>
+                                            <div class="user-review-thumb"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="15" height="14" viewBox="0 0 15 14"
+                                                    class="user-review-thumbIcon">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path d="M-5-8h24v24H-5z"></path>
+                                                        <path fill="#535766" fill-rule="nonzero"
+                                                            d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                        </path>
+                                                    </g>
+                                                </svg>0
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-wrapper border-bottom">
+                                    <div class="product-info_reviews d-flex">
+                                        <span class="review">4 <img class="rating-icon" src="img/start-icon.svg"
+                                                alt="rating icon">
+                                        </span>Mind-blowing purchase
+                                    </div>
+                                    <div class="user-comment">
+                                        <div class="review-gallary">
+                                            <div class="review-thumbnails d-flex">
+                                                <div class="review">
+                                                    <img src="img/thumbnail-1.jpg" index="1" class="hover-shadow cursor">
+                                                </div>                                               
+                                                <!-- <div class="review">
+                                                    <img src="img/thumbnail-2.jpg" index="4" class="hover-shadow cursor">
+                                                    
+                                                </div> -->
+                                                <!-- <div class="review">
+                                                    <img src="img/thumbnail-3.jpg" index="6" class="hover-shadow cursor">
+                                                </div> -->
+                                            </div>
+        
+                                            <div id="myModal" class="modal">
+        
+                                                <div class="modal-content">
+                                                    <i class="fa-solid fa-xmark close ms-auto" id="closeModal"></i>
+                                                    <div class="mySlides">
+                                                        <div class="d-flex h-100">
+                                                            <div class="image-wrapper justify-content-center">
+                                                                <div class="d-flex">
+                                                                    <div class="numbertext">1 / 6</div>
+                                                                </div>
+                                                                <img src="img/thumbnail-1.jpg" alt="gallery">
+                                                            </div>
+                                                            <div class="review-wrapper">
+                                                                <div class="product-info_reviews d-flex">
+                                                                    <span class="review">4 <img class="rating-icon"
+                                                                            src="img/start-icon.svg" alt="rating icon">
+                                                                    </span>Mind-blowing purchase
+                                                                </div>
+                                                                <div class="user-comment">High quality camera 😍</div>
+                                                                <div class="user-review-footer d-flex">
+                                                                    <div class="user-review-left">
+                                                                        <span class="user-name text-truncate"> Narendra Saini
+                                                                            aaaaaaaaaa</span>
+                                                                        <span>12 Aug 2023</span>
+                                                                    </div>
+                                                                    <div class="user-review-votes">
+                                                                        <div class="user-review-thumb">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                                height="14" viewBox="0 0 15 14"
+                                                                                class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
+                                                                                <g fill="none" fill-rule="evenodd">
+                                                                                    <path d="M-5-8h24v24H-5z"></path>
+                                                                                    <path fill="#535766" fill-rule="nonzero"
+                                                                                        d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg>1
+                                                                        </div>
+                                                                        <div class="user-review-thumb"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                                height="14" viewBox="0 0 15 14"
+                                                                                class="user-review-thumbIcon">
+                                                                                <g fill="none" fill-rule="evenodd">
+                                                                                    <path d="M-5-8h24v24H-5z"></path>
+                                                                                    <path fill="#535766" fill-rule="nonzero"
+                                                                                        d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg>0
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="mySlides">
+                                                        <div class="d-flex h-100">
+                                                            <div class="image-wrapper justify-content-center">
+                                                                <div class="d-flex">
+                                                                    <div class="numbertext">2 / 6</div>
+                                                                </div>
+                                                                <img src="img/thumbnail-2.jpg" alt="gallery">
+                                                            </div>
+                                                            <div class="review-wrapper">
+                                                                <div class="product-info_reviews d-flex">
+                                                                    <span class="review">3 <img class="rating-icon"
+                                                                            src="img/start-icon.svg" alt="rating icon">
+                                                                    </span>Mind-blowing purchase
+                                                                </div>
+                                                                <div class="user-comment">Good choice</div>
+                                                                <div class="user-review-footer d-flex">
+                                                                    <div class="user-review-left">
+                                                                        <span>Mousam Gu</span>
+                                                                        <span>1 month ago</span>
+                                                                    </div>
+                                                                    <div class="user-review-votes">
+                                                                        <div class="user-review-thumb">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                                height="14" viewBox="0 0 15 14"
+                                                                                class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
+                                                                                <g fill="none" fill-rule="evenodd">
+                                                                                    <path d="M-5-8h24v24H-5z"></path>
+                                                                                    <path fill="#535766" fill-rule="nonzero"
+                                                                                        d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg>1
+                                                                        </div>
+                                                                        <div class="user-review-thumb"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg" width="15"
+                                                                                height="14" viewBox="0 0 15 14"
+                                                                                class="user-review-thumbIcon">
+                                                                                <g fill="none" fill-rule="evenodd">
+                                                                                    <path d="M-5-8h24v24H-5z"></path>
+                                                                                    <path fill="#535766" fill-rule="nonzero"
+                                                                                        d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg>0
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+        
+                                                    <a class="prev" id="prev">&#10094;</a>
+                                                    <a class="next" id="next">&#10095;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-review-footer d-flex">
+                                        <div class="user-review-left">
+                                            <span class="user-name text-truncate"> Narendra Saini aaaaaaaaaa</span>
+                                            <span>12 Aug 2023</span>
+                                        </div>
+                                        <div class="user-review-votes">
+                                            <div class="user-review-thumb">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14"
+                                                    viewBox="0 0 15 14"
+                                                    class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path d="M-5-8h24v24H-5z"></path>
+                                                        <path fill="#535766" fill-rule="nonzero"
+                                                            d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                        </path>
+                                                    </g>
+                                                </svg>1
+                                            </div>
+                                            <div class="user-review-thumb"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="15" height="14" viewBox="0 0 15 14"
+                                                    class="user-review-thumbIcon">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path d="M-5-8h24v24H-5z"></path>
+                                                        <path fill="#535766" fill-rule="nonzero"
+                                                            d="M1.032.383H2.9c.307 0 .593.127.769.34C4.04.276 4.612 0 5.27 0h6.391c1.405 0 2.306.723 2.481 1.955L15 7.184v.127c0 1.106-.922 2.02-2.086 2.02H9.663v2.252c0 .957-.285 1.637-.856 2.04-.9.638-2.13.277-2.174.256l-.264-.085V11.01c0-1.998-2.394-2.678-2.482-2.7l-.197-.042a1.022 1.022 0 01-.813.382H1.01A.992.992 0 010 7.673V1.382a1.029 1.029 0 011.032-1zM7.162 11v2.246c.327.042.873.085 1.265-.212.37-.254.545-.742.545-1.462V8.606h3.948c.741 0 1.33-.593 1.33-1.293v-.042l-.85-5.19v-.022c-.11-.89-.698-1.335-1.723-1.335H5.33C4.59.724 4 1.317 4 2.017v5.55l.174.043c.11.042 2.988.848 2.988 3.39zM.75 7.693c0 .147.135.273.293.273h1.914c.158 0 .293-.126.293-.273V1.48c0-.147-.135-.273-.293-.273H1.043c-.158 0-.293.126-.293.273v6.213z">
+                                                        </path>
+                                                    </g>
+                                                </svg>0
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
