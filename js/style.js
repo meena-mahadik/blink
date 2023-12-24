@@ -1,7 +1,22 @@
 
 $(document).ready(function () {
     // $(window).on('resize', function () { location.reload(); });
-
+    function imageMagnify() {
+        let magnifyHeight = $(window).height() - 200;
+        let magnifyWidth = $('.product-info').width()
+        $("#zoomImg").ezPlus({
+            zoomWindowFadeIn: 100,
+            oomWindowHeight: 1000,
+            zoomWindowWidth: magnifyWidth,
+            zoomWindowFadeOut: 100,
+            zlensFadeIn: 500,
+            lensFadeOut: 500,
+            minZoomLevel: 2,
+            imageCrossfade: true,
+            loadingIcon: "img/spinner.gif",
+            cursor: 'crosshair'
+        });
+    }
 
     // carousel  
     $('.as').slick({
@@ -53,7 +68,7 @@ $(document).ready(function () {
 
     });
 
-    if ($(window).width() > 768) {
+    if ($(window).width() >= 768) {
 
         $('.slider-for').slick({
             slidesToShow: 1,
@@ -61,36 +76,37 @@ $(document).ready(function () {
             arrows: false,
             fade: true,
             asNavFor: '.slider-nav',
+            dots: false,
+            infinite: false,
         });
         $('.slider-nav').slick({
-            slidesToShow: 8,
+            slidesToShow: 4,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
             dots: false,
             centerMode: false,
             vertical: true,
             focusOnSelect: true,
-            // verticalSwiping:true,
+            verticalSwiping: true,
             infinite: false,
         });
 
-
-        let magnifyHeight = $(window).height() - 200;
-        let magnifyWidth = $('.product-info').width()
-        $('.zoom-img').ezPlus({
-            zoomWindowFadeIn: 100,
-            zoomWindowFadeOut: 100,
-            zoomWindowHeight: magnifyHeight,
-            zoomWindowWidth: magnifyWidth,
-            lensFadeIn: 500,
-            lensFadeOut: 500,
-
+        $('.slider-nav').on('click', function (event, slick, currentSlide, nextSlide) {
+            $(".slider-for .slick-slide img").attr('id', '');
+            $('.slider-for .slick-current img').attr('id', 'zoomImg');
+            //on click of thumbnail zoom image should change
+            imageMagnify();
         });
-        $('#zoom-img-2').ezPlus({
-        });
+
+
+        imageMagnify();
+
+
 
     }
 
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    console.log(windowWidth)
     if ($(window).width() <= 768) {
         $('.product-detail-slider').slick({
             dots: true,
@@ -129,10 +145,10 @@ $(document).ready(function () {
 
 
 
-    // fixed header
-    var lastScrollTop = 0;
-    $(window).scroll(function (event) {
 
+    var lastScrollTop = 0;
+    $(window).scroll(function () {
+        // fixed header
         let st = $(this).scrollTop();
         let headerHeight = $('.sticky').height();
         if (st < lastScrollTop) {
@@ -140,26 +156,61 @@ $(document).ready(function () {
             $('.sticky').addClass('fixed');
             $('.banner, .subcategories').css('margin-top', headerHeight);
             $('.thumbnail-slider').css('top', 150);
-
-
+            $('.product-form_quantity').css('top', '110px');
         } else {
             // Scrolling down
             $('.sticky').removeClass('fixed');
             $('.banner, .subcategories').css('margin-top', 0);
             $('.thumbnail-slider').css('top', 10);
+            $('.product-form_quantity').css('top', '0');
         }
 
         lastScrollTop = st;
 
-        // var addToCardOffset = $('.product-form_quantity').offset().top;
-        // console.log("window offset", lastScrollTop);
-        // console.log("div offset", addToCardOffset);
-        // if ($(window).scrollTop() > addToCardOffset) {
-        //     $('.product-form_quantity').addClass('addToCard-sticky');
-        // } else {
-        //     $('.product-form_quantity').removeClass('addToCard-sticky');
-        // }
+        // fixed Add to card on PDP page
+        var addToCardOffset = $('.product-form_quantity').offset().top;
+        if (lastScrollTop > 700 && $(window).width() >= 768) {
+            $('.product-form_quantity').addClass('addToCard-sticky');
+        } else {
+            $('.product-form_quantity').removeClass('addToCard-sticky');
+        }
 
+        // For Mobile devices
+        if (lastScrollTop > 700 && $(window).width() < 768) {
+            $('.add-card-small-device').addClass('add-card-small-device-fixed');
+        } else {
+            $('.add-card-small-device                       ').removeClass('add-card-small-device-fixed');
+        }
+
+    });
+
+    $(window).on('touchmove', function () {
+        debugger
+        let st = $(this).scrollTop();
+        let headerHeight = $('.sticky').height();
+        if (st < lastScrollTop) {
+            // Scrolling up
+            $('.sticky').addClass('fixed');
+            $('.banner, .subcategories').css('margin-top', headerHeight);
+            $('.thumbnail-slider').css('top', 150);
+            $('.product-form_quantity').css('top', '110px');
+        } else {
+            // Scrolling down
+            $('.sticky').removeClass('fixed');
+            $('.banner, .subcategories').css('margin-top', 0);
+            $('.thumbnail-slider').css('top', 10);
+            $('.product-form_quantity').css('top', '0');
+        }
+
+        lastScrollTop = st;
+
+        // fixed Add to card on PDP page
+        var addToCardOffset = $('.product-form_quantity').offset().top;
+        if (lastScrollTop > 700) {
+            $('.product-form_quantity').addClass('addToCard-sticky');
+        } else {
+            $('.product-form_quantity').removeClass('addToCard-sticky');
+        }
     });
 
 
@@ -169,7 +220,7 @@ $(document).ready(function () {
     //    }
 
     // toggle search bar
-    if ($(window).width() < 1024) {
+    if ($(window).width() <= 768) {
         $('#searchBox').hide();
         $("#headerAction").click(function () {
             $(this).toggleClass('switch-icons');
@@ -228,7 +279,7 @@ $(document).ready(function () {
 
 
     }
-    if ($(window).width() > 420) {
+    if ($(window).width() <= 430) {
         $('.swatch-container-wrap').addClass('offcanvas offcanvas-bottom');
 
         $('.left-search-filter').css('display', 'block')
@@ -291,7 +342,6 @@ $(document).ready(function () {
     // Review gallary functionality start
     $('.review-gallary img').on('click', function () {
         var n = $(this).attr('index');
-        console.log("image index", n);
         currentSlide(n)
         showSlides(n);
         $('body').addClass('offbody-scroll');

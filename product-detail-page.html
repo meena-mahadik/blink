@@ -24,8 +24,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/slick.min.css" rel="stylesheet">
     <link href="css/slick-theme.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- <link rel="stylesheet" href="css/bootstrap-drawer.css"> -->
 </head>
 
@@ -396,8 +395,9 @@
                                     </span>
                                     <div
                                         class="header-action-list d-flex align-content-end d-flex header-action-list justify-content-between">
-                                        <div class="account_login d-lg-block d-none">
-                                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                        <div class="account_login d-lg-block d-none dropdown">                                           
+
+                                            <a href="#" data-bs-toggle="dropdown" aria-expanded="false" id="loginForm"><svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"
                                                     viewBox="0 0 35 35" class="header-icon">
                                                     <defs>
@@ -420,9 +420,10 @@
                                                     </g>
                                                 </svg></a>
 
-                                            <div class="menu_dropdown_wrap" style="display: none;">
+                                            <div class="menu_dropdown_wrap dropdown-menu"   aria-labelledby="loginForm">
+                                                <i class="fa-solid fa-caret-up arrow-up"></i>
                                                 <div id="customer-logins">
-                                                    <div class="cross_login">x</div>
+                                                    <!-- <div class="cross_login">x</div> -->
                                                     <h2 class="form-title">Sign In</h2>
                                                     <form id="customer_login" accept-charset="UTF-8"
                                                         data-login-with-shop-sign-in="true"
@@ -449,19 +450,21 @@
                                                             In</button>
 
                                                         <div
-                                                            class="form-group d-flex justify-content-center align-items-center">
+                                                            class="form-group d-flex justify-content-end align-items-center">
 
                                                             <a href="#" onclick="hideaccpetforgot();"
                                                                 class="forgot-pass">Forgot your
                                                                 password?</a>
                                                         </div>
+
+                                                        <div class="divider"><span>or</span></div>
                                                         <div class="ssw-social-login-widget">
-                                                            <div class="ssw-socialconnect">
+                                                            <div class="ssw-socialconnect d-flex">
 
                                                                 <div class="ssw-gconnect ssw-social-btn">
                                                                     <a title="Continue with Google"
                                                                         aria-label="Continue with Google"
-                                                                        tabindex="0"><svg width="22px" height="22px;"
+                                                                        tabindex="0"><svg 
                                                                             viewBox="0 0 533.5 544.3"
                                                                             xmlns="http://www.w3.org/2000/svg">
                                                                             <path
@@ -483,7 +486,7 @@
                                                                     <a title="Continue with Facebook"
                                                                         aria-label="Continue with Facebook"
                                                                         tabindex="0">
-                                                                        <svg width="22px" height="22px;" id="Layer_1"
+                                                                        <svg id="Layer_1"
                                                                             style="enable-background:new 0 0 512 512;"
                                                                             version="1.1" viewBox="0 0 512 512"
                                                                             xml:space="preserve"
@@ -951,7 +954,7 @@
 
             <div class="subcategories row pt-3 product-info_details">
                 <!-- User this HTML for Slider -->
-                <div class="slick-vertical col-lg-7 col-12" id="slickVertical">
+                <div class="slick-vertical col-xl-7 col-lg-6 col-12" id="slickVertical">
                     <div class="clearfix thumbnail-slider">
                         <img src="img/closs-icon.svg" class="off-fullscreen" alt="close icon">
                         <div class="slider slider-nav thumb-image">
@@ -970,21 +973,6 @@
                                     <img src="img/small-thumbnail-3.jpg" alt="thumbnail-3">
                                 </div>
                             </div>
-                            <!-- <div class="thumbnail-image">
-                                <div class="thumbImg">
-                                    <img src="img/small-thumbnail-1.jpg" alt="thumbnail-1">
-                                </div>
-                            </div>
-                            <div class="thumbnail-image">
-                                <div class="thumbImg">
-                                    <img src="img/small-thumbnail-2.jpg" alt="thumbnail-1">
-                                </div>
-                            </div>
-                            <div class="thumbnail-image">
-                                <div class="thumbImg">
-                                    <img src="img/small-thumbnail-3.jpg" alt="thumbnail-1">
-                                </div>
-                            </div>
                             <div class="thumbnail-image">
                                 <div class="thumbImg">
                                     <img src="img/small-thumbnail-1.jpg" alt="thumbnail-1">
@@ -999,46 +987,61 @@
                                 <div class="thumbImg">
                                     <img src="img/small-thumbnail-3.jpg" alt="thumbnail-1">
                                 </div>
-                            </div> -->
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbImg">
+                                    <img src="img/small-thumbnail-1.jpg" alt="thumbnail-1">
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbImg">
+                                    <img src="img/small-thumbnail-2.jpg" alt="thumbnail-1">
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbImg">
+                                    <img src="img/small-thumbnail-3.jpg" alt="thumbnail-1">
+                                </div>
+                            </div>
                         </div>
                         <div class="slider product-detail-slider slider-for">
-                            <div class="slider-banner-image">
-                                <img class="zoom-img" src="img/small-thumbnail-1.jpg"
+                            <div class="slider-banner-image"> 
+                                <img id="zoomImg"  src="img/small-thumbnail-1.jpg"
                                     data-zoom-image="img/small-thumbnail-1.jpg" alt="thumbnail-1" />
                             </div>
                             <div class="slider-banner-image">
-                                <img class="zoom-img" src="img/small-thumbnail-2.jpg"
+                                <img  src="img/small-thumbnail-2.jpg"
                                     data-zoom-image="img/small-thumbnail-2.jpg" alt="thumbnail-2" />
                             </div>
 
                             <div class="slider-banner-image zoom-box">
-                                <img class="zoom-img" src="img/small-thumbnail-3.jpg"
+                                <img  src="img/small-thumbnail-3.jpg"
                                     data-zoom-image="img/small-thumbnail-3.jpg" alt="thumbnail-3">
                             </div>
-                            <!-- <div class="slider-banner-image zoom-box">
-                                <img class="zoom-img" src="img/small-thumbnail-1.jpg"
+                            <div class="slider-banner-image zoom-box">
+                                <img  src="img/small-thumbnail-1.jpg"
                                     data-zoom-image="img/small-thumbnail-1.jpg" />
                             </div>
                             <div class="slider-banner-image zoom-box">
-                                <img class="zoom-img" src="img/small-thumbnail-2.jpg" alt="thumbnail-1"
+                                <img  src="img/small-thumbnail-2.jpg" alt="thumbnail-1"
                                 data-zoom-image="img/small-thumbnail-2.jpg">
                             </div>
                             <div class="slider-banner-image zoom-box">
-                                <img class="zoom-img" src="img/small-thumbnail-3.jpg"  alt="thumbnail-1"
+                                <img  src="img/small-thumbnail-3.jpg"  alt="thumbnail-1"
                                 data-zoom-image="img/small-thumbnail-3.jpg">
                             </div>
                             <div class="slider-banner-image zoom-box">
-                                <img class="zoom-img" src="img/small-thumbnail-1.jpg"
+                                <img  src="img/small-thumbnail-1.jpg"
                                     data-zoom-image="img/small-thumbnail-1.jpg" />
                             </div>
                             <div class="slider-banner-image zoom-box">
-                                <img class="zoom-img" src="img/small-thumbnail-2.jpg" alt="thumbnail-1"
+                                <img src="img/small-thumbnail-2.jpg" alt="thumbnail-1"
                                 data-zoom-image="img/small-thumbnail-2.jpg">
                             </div>
                             <div class="slider-banner-image zoom-box">
-                                <img class="zoom-img" src="img/small-thumbnail-3.jpg"  alt="thumbnail-1"
+                                <img src="img/small-thumbnail-3.jpg"  alt="thumbnail-1"
                                 data-zoom-image="img/small-thumbnail-3.jpg">
-                            </div> -->
+                            </div>
 
 
                         </div>
@@ -1046,7 +1049,7 @@
                     </d>
                     <!-- End User this HTML for Slider -->
                 </div>
-                <div class="col-lg-5  product-info">
+                <div class="col-lg-6 col-xl-5  product-info">
                     <div class="product-info_title">
                         <a href="" class="product-details_vendor">XFX</a>
                         <h1 class="product-details_title">XFX Judge Gaming Pc–Ryzen 5 7600X-32Gb 6000Mhz–Rx 7900Xt 20Gb
@@ -1282,7 +1285,8 @@
                                 </div>
 
                             </div>
-                            <div class="mt-3">
+                            <div class="mt-3 add-card-small-device d-flex">
+                                <button type="button" class="btn-1 btn text-uppercase w-100 buy-it">add to card</button>
                                 <button type="button" class="btn-1 btn text-uppercase w-100">Buy it
                                     now</button>
                             </div>
@@ -1867,7 +1871,7 @@
                                         </div>
                                     </div>
 
-                                    <div>
+                                    <div class="w-100"> 
                                         <div class="d-flex rating-wrapper">
                                             <div class="rating d-flex">
                                                 <span class="rating-level">5</span>

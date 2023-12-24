@@ -1518,9 +1518,7 @@ if (typeof Object.create !== 'function') {
                 self.$elem.attr('src', smallimage);
                 if (self.options.tint) {
                     self.zoomTintImage.attr('src', largeimage);
-                    //self.zoomTintImage.attr('width',elem.data('image'));
                     self.zoomTintImage.attr('height', elemHeight);
-                    //self.zoomTintImage.attr('src') = elem.data('image');
                     self.zoomTintImage.css('height', elemHeight);
                     self.zoomTint.css('height', elemHeight);
 
@@ -1979,7 +1977,7 @@ if (typeof Object.create !== 'function') {
         lensSize: 200,
         lenszoom: false,
 
-        loadingIcon: false, //http://www.example.com/spinner.gif
+        loadingIcon: true, //http://www.example.com/spinner.gif
 
         // This change will allow to decide if you want to decrease
         // zoom of one of the dimensions once the other reached it's top value,
