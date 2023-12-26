@@ -1716,6 +1716,32 @@
     <!-- sliding tab -->
     <!-- <script type="text/javascript" src="https://lopatin.github.io/sliderTabs/jquery.sliderTabs.min.js"></script> -->
     <script src="js/style.js"></script>
+    <script src="manifest.json"></script>
+
+    <script>
+        // Global constants
+window.APP_NAME = 'Progressive Web App';
+window.BASE_URL = '/';
+window.COOKIE_PREFIX = '/pwa';
+window.ENV = 'dev'; // or 'prod'
+window.DEBUG_MODE = window.ENV !== 'prod';
+window.GA_ENABLED = true; // Google Analytics
+
+  
+debugger; 
+  if ('serviceWorker' in navigator) {
+   
+    navigator.serviceWorker.register('/sw.js', { scope: '/' });
+      .then(registration => console.log('Service Worker registered with scope:', registration.scope))
+      .catch(error => console.error('Service Worker registration failed:', error));
+  } else {
+        console.log('not supported')
+    }
+
+
+
+
+    </script>
 
 </body>
 
