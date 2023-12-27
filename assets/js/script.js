@@ -1,5 +1,24 @@
 
+
 $(document).ready(function () {
+
+    function registerServiceWorker() {
+
+        if ('serviceWorker' in navigator) {
+
+            setTimeout(() => {
+                navigator.serviceWorker.register('/sw.js', { scope: '/' })
+                .then(registration => console.log('Service Worker registered with scope:', registration.scope))
+                .catch(error => console.error('Service Worker registration failed:', error));
+            }, 3000);
+            
+        } else {
+            console.log('not supported')
+        }
+    }
+
+     registerServiceWorker();
+
     // $(window).on('resize', function () { location.reload(); });
     function imageMagnify() {
         let magnifyHeight = $(window).height() - 200;
@@ -13,7 +32,7 @@ $(document).ready(function () {
             lensFadeOut: 500,
             minZoomLevel: 2,
             imageCrossfade: true,
-            loadingIcon: "img/spinner.gif",
+            loadingIcon: "assets/img/spinner.gif",
             cursor: 'crosshair'
         });
     }
@@ -184,8 +203,7 @@ $(document).ready(function () {
 
     });
 
-    $(window).on('touchmove', function () {
-        debugger
+    $(window).on('touchmove', function () {      
         let st = $(this).scrollTop();
         let headerHeight = $('.sticky').height();
         if (st < lastScrollTop) {
@@ -395,7 +413,8 @@ $(document).ready(function () {
         for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex - 1].style.display = "block";
+        // slides[slideIndex - 1].style.display = "block";
+        
     }
 
 
