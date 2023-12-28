@@ -4,6 +4,7 @@
     "theme_color": "#231f20",
     "background_color": "#fff",
     "display": "standalone",
+    "description": "Blink is Kuwait’s largest online shopping store featuring electronics, mobiles, computers, laptops, home appliances and beauty products; featuring daily deals and specials. Pay online, or in store; with delivery options for every need.",
     "scope": "./",
     "start_url": "./",
     "icons": [

@@ -5,30 +5,30 @@ const CACHE_NAME = 'your-app-cache';
 const files = [
   '/',
   '/index.html',
-  
-  '../assets/img/slide-1.jpg',
-  '../assets/img/blink-logo.png',
-  '../assets/img/slide-2.jpg',
-  '../assets/img/slide-3.jpg',
-  '../assets/img/slide-4.jpg',
-  '../assets/img/slide-5.jpg',
-  '../assets/img/slide-6.jpg',
-  '../assets/img/slide-7.jpg',
 
-  // '../assets/img/slider-11.jpg',
-  // '../assets/img/slider-14.jpg',
-  // '../assets/img/slider-15.jpg',
-  // '../assets/img/slider-16.jpg',
-  // '../assets/img/slider-17.jpg',
-  // '../assets/img/slider-18.jpg',
+  // '../assets/img/slide-1.jpg',
+  // '../assets/img/blink-logo.png',
+  // '../assets/img/slide-2.jpg',
+  // '../assets/img/slide-3.jpg',
+  // '../assets/img/slide-4.jpg',
+  // '../assets/img/slide-5.jpg',
+  // '../assets/img/slide-6.jpg',
+  // '../assets/img/slide-7.jpeg',
 
-  // '../assets/img/narrow-banner-2.avif',
-  // '../assets/img/sumsung-logo.png',
-  // '../assets/img/glorious-logo.jpg',
-  // '../assets/img/Asset_3.svg',
-  // '../assets/img/dxr-logo1.png',
-  // '../assets/img/apple-logo.png',
-  // '../assets/img/Asset_4.svg',
+  '../assets/img/slider-11.jpg',
+  '../assets/img/slider-14.jpg',
+  '../assets/img/slider-15.jpg',
+  '../assets/img/slider-16.jpg',
+  '../assets/img/slider-17.jpg',
+  '../assets/img/slider-18.jpg',
+
+  '../assets/img/narrow-banner-2.avif',
+  '../assets/img/sumsung-logo.png',
+  '../assets/img/glorious-logo.jpg',
+  '../assets/img/Asset_3.svg',
+  '../assets/img/dxr-logo1.png',
+  '../assets/img/apple-logo.png',
+  '../assets/img/Asset_4.svg',
 
   '../assets/css/bootstrap.min.css',
   'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap',
@@ -67,15 +67,15 @@ self.addEventListener('install', event => {
 
 
   // Perform installation steps
-  // event.waitUntil(
-  //   caches.open(CACHE_NAME)
-  //     .then(cache => {
-  //       return cache.addAll(files)
-  //         .catch(err => {
-  //           console.error("Error adding files to cache", err)
-  //         })
-  //     })
-  // );
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        return cache.addAll(files)
+          .catch(err => {
+            console.error("Error adding files to cache", err)
+          })
+      })
+  );
   console.log("SW Installed")
 });
 

@@ -17,7 +17,7 @@ $(document).ready(function () {
         }
     }
 
-     registerServiceWorker();
+    //  registerServiceWorker();
 
     // $(window).on('resize', function () { location.reload(); });
     function imageMagnify() {
@@ -272,6 +272,7 @@ $(document).ready(function () {
 
 
     $('#searchBox').click('input', function (event) {
+        debugger
         $('.search-autocomplete').css('display', 'flex');
         event.stopPropagation();
     });
@@ -413,7 +414,7 @@ $(document).ready(function () {
         for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        // slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].style.display = "block";
         
     }
 

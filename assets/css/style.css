@@ -433,6 +433,13 @@ header {
   right: 0;
   width: 100%;
 }
+.tab-heading h2{
+  margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0;
+}
 
 .tab-heading li a.active:after {
   visibility: visible;
@@ -3992,7 +3999,7 @@ quantity-input quantity-input-plus {
   padding: 20px !important;
 }
 
-.swatch-container-mobile h5 {
+.swatch-container-mobile .heading {
   margin-top: 30px;
   font-size: 14px;
   font-weight: 700;
