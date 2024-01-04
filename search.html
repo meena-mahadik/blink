@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 
 <head>
     <title>Blink – Kuwait’s Largest Online Shopping Store </title>
@@ -13,6 +13,8 @@
     <meta name="description" content="">
     <link rel="apple-touch-icon" sizes="180x180"  href="assets/img/180x180.png">
     <link rel="shortcut icon"  href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">      
@@ -390,8 +392,8 @@
                                     </span>
                                     <div
                                         class="header-action-list d-flex align-content-end d-flex header-action-list justify-content-between">
-                                        <div class="account_login d-lg-block d-none">
-                                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                        <div class="account_login d-lg-block d-none dropdown">
+                                            <a href="#" data-bs-toggle="dropdown" aria-expanded="false" id="loginForm"><svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"
                                                     viewBox="0 0 35 35" class="header-icon">
                                                     <defs>
@@ -414,97 +416,92 @@
                                                     </g>
                                                 </svg></a>
 
-                                            <div class="menu_dropdown_wrap" style="display: none;">
-                                                <div id="customer-logins">
-                                                    <div class="cross_login">x</div>
-                                                    <h2 class="form-title">Sign In</h2>
-                                                    <form id="customer_login" accept-charset="UTF-8"
-                                                        data-login-with-shop-sign-in="true"
-                                                        class="account-form login-form">
-                                                        <input type="hidden" name="form_type"
-                                                            value="customer_login"><input type="hidden" name="utf8"
-                                                            value="✓">
-                                                        <div class="form-group address_field">
-                                                            <label for="login-email">Email Address<span
-                                                                    class="req">*</span>
-                                                            </label>
-                                                            <input type="email" required="" id="login-email"
-                                                                name="customer[email]">
-                                                        </div>
-                                                        <div class="form-group password_fields">
-                                                            <label for="login-password">Password<span
-                                                                    class="req">*</span>
-                                                            </label>
-                                                            <input type="password" required="" id="login-password"
-                                                                name="customer[password]">
-                                                        </div>
-
-                                                        <button type="submit" class="btn btn-1 btn-submit sign_in">Sign
-                                                            In</button>
-
-                                                        <div
-                                                            class="form-group d-flex justify-content-center align-items-center">
-
-                                                            <a href="#" onclick="hideaccpetforgot();"
-                                                                class="forgot-pass">Forgot your
-                                                                password?</a>
-                                                        </div>
-                                                        <div class="ssw-social-login-widget">
-                                                            <div class="ssw-socialconnect">
-
-                                                                <div class="ssw-gconnect ssw-social-btn">
-                                                                    <a title="Continue with Google"
-                                                                        aria-label="Continue with Google"
-                                                                        tabindex="0"><svg width="22px" height="22px;"
-                                                                            viewBox="0 0 533.5 544.3"
-                                                                            xmlns="http://www.w3.org/2000/svg">
-                                                                            <path
-                                                                                d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z"
-                                                                                fill="#4285f4"></path>
-                                                                            <path
-                                                                                d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z"
-                                                                                fill="#34a853"></path>
-                                                                            <path
-                                                                                d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z"
-                                                                                fill="#fbbc04"></path>
-                                                                            <path
-                                                                                d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z"
-                                                                                fill="#ea4335"></path>
-                                                                        </svg><span>Sign In With Google</span></a>
-                                                                </div>
-
-                                                                <div class="ssw-fbconnect ssw-social-btn">
-                                                                    <a title="Continue with Facebook"
-                                                                        aria-label="Continue with Facebook"
-                                                                        tabindex="0">
-                                                                        <svg width="22px" height="22px;" id="Layer_1"
-                                                                            style="enable-background:new 0 0 512 512;"
-                                                                            version="1.1" viewBox="0 0 512 512"
-                                                                            xml:space="preserve"
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                            <path class="facebook-icon"
-                                                                                d="M366,172.6h-74.9v-49.1c0-18.5,12.2-22.8,20.8-22.8c8.6,0,52.9,0,52.9,0V19.6L292,19.3  c-80.8,0-99.2,60.5-99.2,99.2v54.1H146v83.6h46.7c0,107.3,0,236.5,0,236.5h98.3c0,0,0-130.5,0-236.5h66.3L366,172.6z">
-                                                                            </path>
-                                                                        </svg><span>Sign In With Facebook</span></a>
-                                                                </div>
-
+                                                <div class="menu_dropdown_wrap dropdown-menu"   aria-labelledby="loginForm">
+                                                    <i class="fa-solid fa-caret-up arrow-up"></i>
+                                                    <div id="customer-logins">
+                                                        <!-- <div class="cross_login">x</div> -->
+                                                        <h2 class="form-title">Sign In</h2>
+                                                        <form id="customer_login"                                                         
+                                                            class="account-form login-form">
+                                                            <input type="hidden" name="form_type"
+                                                                value="customer_login"><input type="hidden" name="utf8"
+                                                                value="✓">
+                                                            <div class="form-group address_field">
+                                                                <label for="login-email">Email Address<span
+                                                                        class="req">*</span>
+                                                                </label>
+                                                                <input type="email" required="" id="login-email"
+                                                                    name="customer[email]">
                                                             </div>
-                                                        </div>
-
-                                                        <div class="form-group continue_field" id="create_accout_">
-
-                                                            <button class="continue_btn_popup">CREATE ACCOUNT</button>
-
-                                                        </div>
-                                                    </form>
-
-
-
+                                                            <div class="form-group password_fields">
+                                                                <label for="login-password">Password<span
+                                                                        class="req">*</span>
+                                                                </label>
+                                                                <input type="password" required="" id="login-password"
+                                                                    name="customer[password]">
+                                                            </div>
+    
+                                                            <button type="submit" class="btn btn-1 btn-submit sign_in">Sign
+                                                                In</button>
+    
+                                                            <div
+                                                                class="form-group d-flex justify-content-end align-items-center">
+    
+                                                                <a href="javascript:void(0)"
+                                                                    class="forgot-pass">Forgot your
+                                                                    password?</a>
+                                                            </div>
+    
+                                                            <div class="divider"><span>or</span></div>
+                                                            <div class="ssw-social-login-widget">
+                                                                <div class="ssw-socialconnect d-flex">
+    
+                                                                    <div class="ssw-gconnect ssw-social-btn">
+                                                                        <a title="Continue with Google"
+                                                                            aria-label="Continue with Google"
+                                                                            tabindex="0"><svg 
+                                                                                viewBox="0 0 533.5 544.3"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z"
+                                                                                    fill="#4285f4"></path>
+                                                                                <path
+                                                                                    d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z"
+                                                                                    fill="#34a853"></path>
+                                                                                <path
+                                                                                    d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z"
+                                                                                    fill="#fbbc04"></path>
+                                                                                <path
+                                                                                    d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z"
+                                                                                    fill="#ea4335"></path>
+                                                                            </svg><span>Sign In With Google</span></a>
+                                                                    </div>
+    
+                                                                    <div class="ssw-fbconnect ssw-social-btn">
+                                                                        <a title="Continue with Facebook"
+                                                                            aria-label="Continue with Facebook"
+                                                                            tabindex="0">
+                                                                            <svg id="Layer_1"
+                                                                                style="enable-background:new 0 0 512 512;"
+                                                                                version="1.1" viewBox="0 0 512 512"
+                                                                                xml:space="preserve"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                                <path class="facebook-icon"
+                                                                                    d="M366,172.6h-74.9v-49.1c0-18.5,12.2-22.8,20.8-22.8c8.6,0,52.9,0,52.9,0V19.6L292,19.3  c-80.8,0-99.2,60.5-99.2,99.2v54.1H146v83.6h46.7c0,107.3,0,236.5,0,236.5h98.3c0,0,0-130.5,0-236.5h66.3L366,172.6z">
+                                                                                </path>
+                                                                            </svg><span>Sign In With Facebook</span></a>
+                                                                    </div>
+    
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="form-group continue_field" id="create_accout_">
+                                                                <button class="continue_btn_popup">CREATE ACCOUNT</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
-
-
-                                            </div>
                                         </div>
                                         <!-- <div class="whishlist_icon bb">
                                 <a class="ssw-link-fave-menu header-action-list  ssw-link-fave-menu-hide-count whishlist_icon"
@@ -2217,7 +2214,6 @@
     <!-- mobile view menu -->
     <script src="assets/js/bootstrap-drawer.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="manifest.json"></script> 
 </body>
 
 </html>

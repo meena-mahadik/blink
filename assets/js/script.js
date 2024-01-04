@@ -19,26 +19,10 @@ $(document).ready(function () {
 
     //  registerServiceWorker();
 
-    // $(window).on('resize', function () { location.reload(); });
-    function imageMagnify() {
-        let magnifyHeight = $(window).height() - 200;
-        let magnifyWidth = $('.product-info').width()
-        $("#zoomImg").ezPlus({
-            zoomWindowFadeIn: 100,
-            oomWindowHeight: 1000,
-            zoomWindowWidth: magnifyWidth,
-            zoomWindowFadeOut: 100,
-            zlensFadeIn: 500,
-            lensFadeOut: 500,
-            minZoomLevel: 2,
-            imageCrossfade: true,
-            loadingIcon: "assets/img/spinner.gif",
-            cursor: 'crosshair'
-        });
-    }
+  
 
     // carousel  
-    $('.as').slick({
+    $('.slick-slider').slick({
         dots: false,
         infinite: false,
         autoplay: false,
@@ -76,7 +60,7 @@ $(document).ready(function () {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             }
@@ -87,7 +71,7 @@ $(document).ready(function () {
 
     });
 
-    if ($(window).width() >= 768) {
+    if ($(window).width() > 768) {
 
         $('.slider-for').slick({
             slidesToShow: 1,
@@ -108,19 +92,7 @@ $(document).ready(function () {
             focusOnSelect: true,
             verticalSwiping: true,
             infinite: false,
-        });
-
-        $('.slider-nav').on('click', function (event, slick, currentSlide, nextSlide) {
-            $(".slider-for .slick-slide img").attr('id', '');
-            $('.slider-for .slick-current img').attr('id', 'zoomImg');
-            //on click of thumbnail zoom image should change
-            imageMagnify();
-        });
-
-
-        imageMagnify();
-
-
+        }); 
 
     }
 
@@ -375,49 +347,8 @@ $(document).ready(function () {
     })
 
 
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    $('#prev').on('click', function () {
-        let n = slideIndex - 1;
-        showSlides(n);
-    })
-
-    $('#next').on('click', function () {
-        let n = +slideIndex + 1;
-        showSlides(n);
-    })
+    
 
 
-    $('#prev').on('swipeleft', function () {
-        let n = slideIndex - 1;
-        showSlides(n);
-    })
-
-    $('#next').on('swiperight', function () {
-        let n = slideIndex + 1;
-        showSlides(n);
-    })
-
-
-
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        slideIndex = n;
-        var slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex - 1].style.display = "block";
-        
-    }
-
-
-    // Review gallary functionality start
+    
 })

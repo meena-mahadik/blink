@@ -13,6 +13,8 @@
     <meta name="description" content="">
     <link rel="apple-touch-icon" sizes="180x180"  href="assets/img/180x180.png">
     <link rel="shortcut icon"  href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+                                                                                                                                        <link rel="manifest" href="/manifest.json">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">      
@@ -421,8 +423,7 @@
                                                 <div id="customer-logins">
                                                     <!-- <div class="cross_login">x</div> -->
                                                     <h2 class="form-title">Sign In</h2>
-                                                    <form id="customer_login" accept-charset="UTF-8"
-                                                        data-login-with-shop-sign-in="true"
+                                                    <form id="customer_login"                                                         
                                                         class="account-form login-form">
                                                         <input type="hidden" name="form_type"
                                                             value="customer_login"><input type="hidden" name="utf8"
@@ -448,7 +449,7 @@
                                                         <div
                                                             class="form-group d-flex justify-content-end align-items-center">
 
-                                                            <a href="#" onclick="hideaccpetforgot();"
+                                                            <a href="javascript:void(0)"
                                                                 class="forgot-pass">Forgot your
                                                                 password?</a>
                                                         </div>
@@ -498,17 +499,10 @@
                                                         </div>
 
                                                         <div class="form-group continue_field" id="create_accout_">
-
                                                             <button class="continue_btn_popup">CREATE ACCOUNT</button>
-
                                                         </div>
                                                     </form>
-
-
-
                                                 </div>
-
-
                                             </div>
                                         </div>
                                         <!-- <div class="whishlist_icon bb">
@@ -1989,8 +1983,8 @@
                                                             </div>
                                                             <div class="user-review-votes">
                                                                 <div class="user-review-thumb">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15"
-                                                                        height="14" viewBox="0 0 15 14"
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                                                        viewBox="0 0 15 14"
                                                                         class="user-review-thumbIcon user-review-thumbsDown user-review-rotate180">
                                                                         <g fill="none" fill-rule="evenodd">
                                                                             <path d="M-5-8h24v24H-5z"></path>
@@ -2001,8 +1995,8 @@
                                                                     </svg>1
                                                                 </div>
                                                                 <div class="user-review-thumb"><svg
-                                                                        xmlns="http://www.w3.org/2000/svg" width="15"
-                                                                        height="14" viewBox="0 0 15 14"
+                                                                        xmlns="http://www.w3.org/2000/svg" 
+                                                                         viewBox="0 0 15 14"
                                                                         class="user-review-thumbIcon">
                                                                         <g fill="none" fill-rule="evenodd">
                                                                             <path d="M-5-8h24v24H-5z"></path>
@@ -2412,7 +2406,7 @@
 
                 </ul>
 
-                <div class="row as">
+                <div class="row slick-slider">
                     <div class="">
                         <product-card class="product-card no-divider">
                             <header class="product-card_header">
@@ -2691,7 +2685,7 @@
 
                 </ul>
 
-                <div class="row as">
+                <div class="row slick-slider">
                     <div class="">
                         <product-card class="product-card no-divider">
                             <header class="product-card_header">
@@ -3545,7 +3539,77 @@
     <script src="assets/js/bootstrap-drawer.js"></script>
     <script src="assets/js/jquery.ez-plus.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="manifest.json"></script>
+    <script>
+    // $(window).on('resize', function () { location.reload(); });
+    if ($(window).width() > 768) {
+    function imageMagnify() {
+        let magnifyHeight = $(window).height() - 200;
+        let magnifyWidth = $('.product-info').width()
+        $("#zoomImg").ezPlus({
+            zoomWindowFadeIn: 100,
+            oomWindowHeight: 1000,
+            zoomWindowWidth: magnifyWidth,
+            zoomWindowFadeOut: 100,
+            zlensFadeIn: 500,
+            lensFadeOut: 500,
+            minZoomLevel: 2,
+            imageCrossfade: true,
+            loadingIcon: "assets/img/spinner.gif",
+            cursor: 'crosshair'
+        });
+    }
+    $('.slider-nav').on('click', function (event, slick, currentSlide, nextSlide) {
+        $(".slider-for .slick-slide img").attr('id', '');
+        $('.slider-for .slick-current img').attr('id', 'zoomImg');
+        //on click of thumbnail zoom image should change
+        imageMagnify();
+    });
+    imageMagnify();
+}
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+
+    $('#prev').on('click', function () {
+        let n = slideIndex - 1;
+        showSlides(n);
+    })
+
+    $('#next').on('click', function () {
+        let n = +slideIndex + 1;
+        showSlides(n);
+    })
+
+
+    $('#prev').on('swipeleft', function () {
+        let n = slideIndex - 1;
+        showSlides(n);
+    })
+
+    $('#next').on('swiperight', function () {
+        let n = slideIndex + 1;
+        showSlides(n);
+    })
+
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        slideIndex = n;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";        
+    }
+
+
+</script>
 </body>
 
 </html>
